@@ -14,7 +14,7 @@ Consolidates extra extension buttons on the bottom panel into a single dropdown 
 
 1. Open SillyTavern
 2. Extensions → Install Extension
-3. Paste: `https://github.com/username/button-consolidator`
+3. Paste: `Ellii7076`
 4. Refresh the page
 
 ## Usage
