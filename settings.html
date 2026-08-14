@@ -1,0 +1,43 @@
+<div id="consolidator-settings" class="consolidator-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>🔧 Button Consolidator</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="settings-block">
+                <div class="settings-row">
+                    <label for="consolidator_enabled" class="checkbox-label">
+                        <input id="consolidator_enabled" type="checkbox" checked />
+                        Enable Consolidation
+                    </label>
+                    <small class="hint">Automatically hide extension buttons and group them</small>
+                </div>
+                
+                <div class="settings-row">
+                    <label for="consolidator_selector" class="settings-label">
+                        Button Selector
+                        <span class="hint">(CSS selector for finding extension buttons)</span>
+                    </label>
+                    <input id="consolidator_selector" type="text" 
+                           value=".extensionsMenu, .extensions-menu, [class*='extension']" 
+                           class="text_pole" />
+                </div>
+                
+                <div class="settings-row">
+                    <label for="consolidator_label" class="settings-label">
+                        Dropdown Label
+                    </label>
+                    <input id="consolidator_label" type="text" value="📦 Extras" class="text_pole" />
+                </div>
+                
+                <div class="settings-row">
+                    <button id="consolidator_apply" class="menu_button">
+                        Apply Consolidation
+                    </button>
+                    <small class="hint">Click to re-consolidate buttons with current settings</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
