@@ -1,0 +1,171 @@
+/* Container for consolidated buttons */
+#consolidator-container {
+    position: relative;
+    display: none; /* Hidden by default until buttons are found */
+    margin: 4px 8px;
+    z-index: 1000;
+}
+
+/* Toggle button */
+.consolidator-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background: var(--SmartThemeBodyColor, #1a1a2e);
+    color: var(--SmartThemeTextColor, #e0e0e0);
+    border: 1px solid var(--SmartThemeBorderColor, #333);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.consolidator-toggle:hover {
+    background: var(--SmartThemeHoverColor, #2a2a4e);
+    border-color: var(--SmartThemeAccentColor, #6c5ce7);
+}
+
+.consolidator-toggle .consolidator-label {
+    white-space: nowrap;
+}
+
+.consolidator-toggle .consolidator-arrow {
+    font-size: 10px;
+    transition: transform 0.2s;
+}
+
+/* Dropdown menu */
+.consolidator-dropdown {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    min-width: 200px;
+    max-width: 350px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: var(--SmartThemeBodyColor, #1a1a2e);
+    border: 1px solid var(--SmartThemeBorderColor, #333);
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    padding: 4px 0;
+    margin-bottom: 4px;
+}
+
+/* Dropdown items */
+.consolidator-item {
+    padding: 2px 4px;
+    border-bottom: 1px solid var(--SmartThemeBorderColor, #2a2a2a);
+}
+
+.consolidator-item:last-child {
+    border-bottom: none;
+}
+
+.consolidator-item-button {
+    display: block;
+    width: 100%;
+    padding: 6px 14px;
+    background: transparent;
+    border: none;
+    color: var(--SmartThemeTextColor, #e0e0e0);
+    text-align: left;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.15s;
+    border-radius: 3px;
+}
+
+.consolidator-item-button:hover {
+    background: var(--SmartThemeHoverColor, #2a2a4e);
+}
+
+/* Empty state */
+.consolidator-empty {
+    padding: 8px 14px;
+    color: var(--SmartThemeTextColor, #888);
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Settings panel styles */
+.consolidator-settings .settings-row {
+    margin: 10px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--SmartThemeBorderColor, #2a2a2a);
+}
+
+.consolidator-settings .settings-row:last-child {
+    border-bottom: none;
+}
+
+.consolidator-settings .settings-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.consolidator-settings .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.consolidator-settings .hint {
+    display: block;
+    font-size: 11px;
+    opacity: 0.7;
+    margin-top: 2px;
+}
+
+.consolidator-settings .text_pole {
+    width: 100%;
+    padding: 6px 10px;
+    background: var(--SmartThemeInputBg, #2a2a3e);
+    color: var(--SmartThemeTextColor, #e0e0e0);
+    border: 1px solid var(--SmartThemeBorderColor, #333);
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.consolidator-settings .menu_button {
+    padding: 6px 18px;
+    background: var(--SmartThemeButtonBg, #2a2a4e);
+    color: var(--SmartThemeTextColor, #e0e0e0);
+    border: 1px solid var(--SmartThemeBorderColor, #333);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.consolidator-settings .menu_button:hover {
+    background: var(--SmartThemeButtonHover, #3a3a5e);
+}
+
+/* Scrollbar styling */
+.consolidator-dropdown::-webkit-scrollbar {
+    width: 4px;
+}
+
+.consolidator-dropdown::-webkit-scrollbar-track {
+    background: var(--SmartThemeScrollbarTrack, #1a1a2e);
+}
+
+.consolidator-dropdown::-webkit-scrollbar-thumb {
+    background: var(--SmartThemeScrollbarThumb, #444);
+    border-radius: 2px;
+}
+
+.consolidator-dropdown::-webkit-scrollbar-thumb:hover {
+    background: var(--SmartThemeScrollbarThumbHover, #666);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .consolidator-dropdown {
+        max-width: 250px;
+    }
+}
